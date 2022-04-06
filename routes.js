@@ -10,18 +10,23 @@ router.get("/posts", async(req, res) => {
 
 
 })
+
+
+/*
 router.get('/posts', (req, res) => {
-    const post = new Post({
+    const dataMongo = new Post({
         fullName: req.body.fullName,
         mailAddress: req.body.mailAddress,
         phoneNumber: req.body.phoneNumber,
     })
-    Post.find({}, function(err, post) {
-        res.render('index', {
-            mongoList: post
+    Post.find({}, function() {
+        res.render('views/index', {
+            mongoList: dataMongo
         })
+
     })
 })
+*/
 
 
 

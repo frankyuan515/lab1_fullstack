@@ -43,8 +43,39 @@
 
 
     <h2>EJS SHOW MongoDB</h2>
+    <button type="button" id="getData">Get data</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Mail Address</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody id="myData">
+            <tbody>
+    </table>
 
     <script src="app.js"></script>
+    <script>
+        getData.onclick = () => {
+            fetch('http://localhost:3000/api/posts')
+                .then(res => res.text())
+                .then((out) => {
+                    let jsonData = JSON.parse(out);
+                    for (let i = 0; i < jsonData.length; i++) {
+                        let mongoData = jsonData[i];
+                        myData.innerHTML +=
+                            "<tr><td>" + mongoData._id + "</td>" +
+                            "<td align='right'>" + mongoData.fullName + "</td>" +
+                            "<td align='right'>" + mongoData.mailAddress + "</td>" +
+                            "<td align='right'>" + mongoData.phoneNumber + "</td></tr>";
+                    };
+                })
+                .catch(err => console.error(err));
+        }
+    </script>
 
 </body>
 

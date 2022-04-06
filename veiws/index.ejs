@@ -52,19 +52,19 @@
             </tr>
         </thead>
         <tbody>
-            <%mongoList.forEach(mongo => {%>
+            <%mongoList.forEach(dataMongo => {%>
                 <tr>
                     <th scope="row">
-                        <%= mongo._id %>
+                        <%= dataMongo._id %>
                     </th>
                     <td>
-                        <%= mongo.fullName %>
+                        <%= dataMongo.fullName %>
                     </td>
                     <td>
-                        <%= mongo.mailAddress %>
+                        <%= dataMongo.mailAddress %>
                     </td>
                     <td>
-                        <%= mongo.phoneNumber %>
+                        <%= dataMongo.phoneNumber %>
                     </td>
                 </tr>
                 <%})%>
