@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <h1>Lab 1 FullStack Development (Geng Yuan)</h1>
+    <p id="error"></p>
+    <form id="sign-up-form">
+
+        <h3>Sign Up</h3>
+        <div>
+            <span>Name</span>
+            <input type="fullName" id="add-name">
+        </div>
+        <div>
+            <span>Email</span>
+            <input type="mailAddress" id="add-mail">
+        </div>
+        <div>
+            <span>Phone</span>
+            <input type="phoneNumber" id="add-phone">
+        </div>
+
+        <button type="submit">Sign Up</button>
+
+        <button onclick="getMongoDB()">MongoDB</button>
+
+        <p>
+            <span>Display all saved data in MongoDB:</span>
+            <div class="container" id="resultData"></div>
+        </p>
+
+    </form>
+
+
+
+    <h2>EJS SHOW MongoDB</h2>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
